@@ -13,5 +13,11 @@ with open('DB/ds.sql', 'r') as file:
     sql_script = file.read()
 
     
-    # 
+# cursor object is used to interact with the database
+cursor = connection.cursor()
+cursor.execute(sql_script)
+connection.commit()
+
+# close the cursor and connection
+cursor.close()
 
