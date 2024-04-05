@@ -4,7 +4,7 @@ import mysql.connector
 connection = mysql.connector.connect(
     host='localhost',
     user='petPalAdmin',
-    password='$fg43$#ter'
+    password='petPalAdmin1244',
 )
 
 # execute the SQL script to create the database
