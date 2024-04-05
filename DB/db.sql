@@ -52,6 +52,21 @@ CREATE TABLE appointments (
     doctor_name VARCHAR(100),
     notes TEXT,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+
+-- immunizations table
+CREATE TABLE immunizations (
+    immunization_id INT AUTO_INCREMENT PRIMARY KEY,
+    pet_id INT,
+    immunization_name VARCHAR(100),
+    immunization_date DATE,
+    next_due_date DATE,
+    FOREIGN KEY (pet_id) REFERENCES pets(pet_id)
+);
+
+
+-- reviews table
 
 
 -- orders table
