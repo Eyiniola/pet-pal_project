@@ -30,6 +30,12 @@ CREATE TABLE accessories (
     accessory_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description VARCHAR(255),
+    price DECIMAL(10, 2),
+    image_url VARCHAR(255)
+);
+
+
+-- medications table
 
 
 -- orders table
