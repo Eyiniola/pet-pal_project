@@ -67,6 +67,38 @@ CREATE TABLE immunizations (
 
 
 -- reviews table
+CREATE TABLE reviews (
+    review_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    pet_id INT,
+    review_date DATE,
+    review_text TEXT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (pet_id) REFERENCES pets(pet_id)
+);
+
+
+-- cart table
+CREATE TABLE cart (
+    cart_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+
+-- cart_items table
+CREATE TABLE cart_items (
+    cart_item_id INT AUTO_INCREMENT PRIMARY KEY,
+    cart_id INT,
+    item_id INT,
+    item_type ENUM('pet', 'accessory') NOT NULL,
+    quantity INT,
+    price_per_unit DECIMAL(10, 2),
+    FOREIGN KEY (cart_id) REFERENCES cart(cart_id),
+    FOREIGN KEY (item_id) REFERENCES pets(pet_id),
+    FOREIGN KEY (item_id) REFERENCES accessories(accessory_id)
+);
 
 
 -- orders table
