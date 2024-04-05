@@ -35,7 +35,7 @@ CREATE TABLE accessories (
 );
 
 
--- medications table
+-- medicals table
 
 
 -- orders table
