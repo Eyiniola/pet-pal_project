@@ -79,7 +79,7 @@ CREATE TABLE reviews (
 
 
 -- cart table
-CREATE TABLE cart (
+CREATE TABLE carts (
     cart_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -91,13 +91,13 @@ CREATE TABLE cart (
 CREATE TABLE cart_items (
     cart_item_id INT AUTO_INCREMENT PRIMARY KEY,
     cart_id INT,
-    item_id INT,
+    product_id INT,
     item_type ENUM('pet', 'accessory') NOT NULL,
     quantity INT,
     price_per_unit DECIMAL(10, 2),
     FOREIGN KEY (cart_id) REFERENCES cart(cart_id),
-    FOREIGN KEY (item_id) REFERENCES pets(pet_id),
-    FOREIGN KEY (item_id) REFERENCES accessories(accessory_id)
+    FOREIGN KEY (product_id) REFERENCES pets(pet_id),
+    FOREIGN KEY (product_id) REFERENCES accessories(accessory_id)
 );
 
 
