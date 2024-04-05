@@ -18,13 +18,18 @@ CREATE TABLE users (
 -- pets table
 CREATE TABLE pets (
     pet_id INT AUTO_INCREMENT PRIMARY KEY,
-    pet_name VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL,
     species VARCHAR(100) NOT NULL,
     age INT NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
-    descriptions TEXT NOT NULL,
     image_url VARCHAR(255)
 );
+
+-- accessories table
+CREATE TABLE accessories (
+    accessory_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description VARCHAR(255),
 
 
 -- orders table
