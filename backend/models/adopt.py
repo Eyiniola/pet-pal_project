@@ -5,6 +5,8 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from services.database import db
 
+# Base = declarative_base()
+
 class Pets(db.Base):
     __tablename__ = 'pets'
 
