@@ -2,6 +2,7 @@
 
 from sqlalchemy.orm import sessionmaker
 from ..models.medical import DoctorAppointment, CheckAppointment, Immunization
+from ..models.adopt import Pets, Users
 from ..services.database import db
 
 class MedicalService:
