@@ -2,7 +2,7 @@
 
 from sqlalchemy import Column, Integer, String, ForeignKey, Date
 from sqlalchemy.orm import relationship
-from ..services.database import db
+from services.database import db
 
 class DoctorAppointment(db.Base):
     __tablename__ = 'doctor_appointment'
