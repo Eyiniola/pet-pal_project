@@ -49,5 +49,5 @@ class AdoptService:
         self.session.commit()
         return cart_items
     
-AdoptService = AdoptService()
+AdoptServices = AdoptService()
 
