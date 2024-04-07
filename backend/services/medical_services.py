@@ -35,4 +35,12 @@ class MedicalService:
         self.session.commit()
         return appointment
     
+    def update_doctor_appointment(self, appointment_id, date, time, purpose):
+        appointment = self.session.query(DoctorAppointment).filter(DoctorAppointment.id == appointment_id).first()
+        appointment.date = date
+        appointment.time = time
+        appointment.purpose = purpose
+        self.session.commit()
+        return appointment
+    
 MedicalServices = MedicalService()
