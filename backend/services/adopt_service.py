@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 from sqlalchemy.orm import sessionmaker
-from ..models.adopt import Pets, ShoppingCart, Users
-from ..services.database import db
+from models.adopt import Pets, ShoppingCart, Users
+from services.database import db
 
 class AdoptService:
     def __init__(self):

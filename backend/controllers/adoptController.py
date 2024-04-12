@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from flask import request, jsonify, Blueprint
-from ..services.adopt_service import AdoptServices
+from services.adopt_service import AdoptServices
 
 adopt = Blueprint('adopt', __name__, url_prefix='/adopt')
 

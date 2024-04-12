@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 from sqlalchemy.orm import sessionmaker
-from ..models.medical import DoctorAppointment, CheckAppointment, Immunization
-from ..models.adopt import Pets, Users
-from ..services.database import db
+from models.medical import DoctorAppointment, CheckAppointment, Immunization
+from models.adopt import Pets, Users
+from services.database import db
 
 class MedicalService:
     def __init__(self):

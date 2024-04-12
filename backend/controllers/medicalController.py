@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from flask import request, jsonify, Blueprint
-from ..services.medical_services import MedicalServices
+from services.medical_services import MedicalServices
 
 
 medical = Blueprint('medical', __name__, url_prefix='/medical')
