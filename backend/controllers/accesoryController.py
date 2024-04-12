@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from flask import request, jsonify, Blueprint
-from ..services.accessory_service import AccesoryServices
+from services.accessory_service import AccesoryServices
 
 
 accesory = Blueprint('accesory', __name__, url_prefix='/accesory')

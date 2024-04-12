@@ -3,9 +3,9 @@
 from flask import Flask
 # from flask_cors import CORS
 from controllers.accesoryController import accesory
-from controllers.medicalController import medical
-from controllers.adoptController import adopt
-from services.database import db
+from .controllers.medicalController import medical
+from .controllers.adoptController import adopt
+from .services.database import db
 
 app = Flask(__name__)
 
