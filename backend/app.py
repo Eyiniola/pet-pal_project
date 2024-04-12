@@ -12,7 +12,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 #  configure the database
-app.config['SQLALCHEMY_DATABASE_URL'] = 'mysql://petPalAdmin:petPalAdmin1244@localhost/pet_pal_project'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://petPalAdmin:petPalAdmin1244@localhost/pet_pal_project'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
