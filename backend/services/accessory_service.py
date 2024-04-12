@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from models.accesories import Accessories, ShoppingCart
 from services.database import db
 
-class AdoptService:
+class AccesoryService:
     def __init__(self):
         self.session = db.Session()
 
@@ -43,4 +43,4 @@ class AdoptService:
         self.session.commit()
         return cart_items
     
-AdoptServices = AdoptService()
+AccesoryServices = AccesoryService()
