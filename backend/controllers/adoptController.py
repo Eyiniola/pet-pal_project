@@ -2,8 +2,20 @@
 
 from flask import request, jsonify, Blueprint
 from services.adopt_service import AdoptServices
+from services.database import db
+
 
 adopt = Blueprint('adopt', __name__, url_prefix='/adopt')
+
+@adopt.route('/add_pet', methods=['POST'])
+def create_pet():
+    data = request.json
+
+    new_instance = AdoptServices.create_pet(data)
+    db.session.add(new_instance)
+    db.session.commit()
+
+    return jsonify(('message', 'Pet added successfully'))
 
 @adopt.route('/pets', methods=['GET'])
 def get_pets():

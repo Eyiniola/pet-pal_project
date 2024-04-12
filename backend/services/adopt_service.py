@@ -8,6 +8,20 @@ class AdoptService:
     def __init__(self):
         self.session = db.Session()
 
+    def create_pet(self, data):
+        name = data.get('name')
+        age = data.get('age')
+        breed = data.get('breed')
+        price = data.get('price')
+        image = data.get('image')
+
+        if name is None or age is None or breed is None or price is None or image is None:
+            return None
+        pet = Pets(name=name, age=age, breed=breed, price=price, image=image)
+        self.session.add(pet)
+        self.session.commit()
+        return pet
+
     def get_pets(self):
         return self.session.query(Pets).all()
     
