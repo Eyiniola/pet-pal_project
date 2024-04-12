@@ -21,8 +21,8 @@ class Pets(db.Base):
     def __repr__(self):
         return "<Pets(id={self.id}, name={self.name})>"
 
-class ShoppingCart(db.Base):
-    __tablename__ = 'shopping_cart'
+class AdoptionShoppingCart(db.Base):
+    __tablename__ = 'adoption_shopping_cart'
 
     id = Column(Integer, primary_key=True)
     name = Column(String(50))

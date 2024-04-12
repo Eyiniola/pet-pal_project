@@ -16,8 +16,8 @@ class Accessories(db.Base):
     def __repr__(self):
         return "<Accessories(id={self.id}, name={self.name})>"
     
-class ShoppingCart(db.Base):
-    __tablename__ = 'shopping_cart'
+class AccessoryShoppingCart(db.Base):
+    __tablename__ = 'accessory_shopping_cart'
 
     id = Column(Integer, primary_key=True)
     name = Column(String(50))
