@@ -2,10 +2,10 @@
 
 from flask import Flask
 # from flask_cors import CORS
-from .controllers.accesoryController import accesory
-from .controllers.medicalController import medical
-from .controllers.adoptController import adopt
-from .services.database import db
+from controllers.accesoryController import accesory
+from controllers.medicalController import medical
+from controllers.adoptController import adopt
+from services.database import db
 
 app = Flask(__name__)
 
@@ -22,4 +22,4 @@ app.register_blueprint(adopt)
 # CORS(app)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=8000, debug=True)
