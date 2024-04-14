@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    PET PALS
+  </title>
+  <!--<link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>-->
+  <style>
+    .body{
+  background-color:  rgba(207, 198, 198, 0.966);
+        }
+    .adopt {
+  background-color: rgb(219, 244, 173);
+  color: black;
+  border: solid;
+  border-color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  margin-right: 700px;
+  margin-left: 700px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 34px;
+  transition: opacity 0.15s;
+  vertical-align: top;
+} 
+.adopt:hover {
+opacity: 0.8;
+border-color: blue;
+}
+
+.adopt:active {
+opacity: 0.5;
+}
+.medicals{
+  background-color: rgb(219, 244, 173);
+  color: black;
+  border: solid;
+  border-color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  margin-right: 700px;
+  margin-left: 700px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 34px;
+  transition: opacity 0.15s;
+  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+}
+
+.medicals:hover {
+opacity: 0.8;
+border-color: blue;
+}
+
+.medicals:active {
+opacity: 0.5;
+}
+.accessories{
+  background-color: rgb(219, 244, 173);
+  color: black;
+  border: solid;
+  border-color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  margin-top: 120px;
+  margin-bottom: 60px;
+  margin-right: 700px;
+  margin-left: 700px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: opacity 0.15s;
+  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+
+}
+.accessories:hover {
+opacity: 0.8;
+border-color: blue;
+}
+
+.accessories:active {
+opacity: 0.5;
+}
+.header {
+  background-color: rgba(128, 128, 0, 1);
+  display: flex;
+  justify-content: space-between;
+  border: 0px;
+  margin-left: 0px;
+  padding-top: 0%;
+
+}
+.off-screen-menu {
+  background-color: rgba(128, 128, 0, 1);
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3px;
+  transition: .3s ease;
+
+}
+.off-screen-menu: active{
+  right: 0;
+}
+.nav {
+  padding: 1rem;
+  display: flex;
+  background-color: rgba(128, 128, 0, 1) ;
+}
+.ham-menu {
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  position: relative;
+}
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.nav.ham-menu {
+  align-items: center;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgba(128, 128, 0, 1);
+  
+}
+.icon {
+  display: flex; 
+  height: 30px;
+  text-align: center;
+}
+const hamMenu = document.querySelector
+('.ham-menu');
+
+const offScreenMenu = document.querySelector
+('.off-screen-menu')
+
+
+hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active');
+    offScreenMenu.classList.toggle('active');
+})  
+  </style>
+
+</head>
+<body class="body">
+  <header class="header">
+    <img src="PET PALS logo 1.jpg" alt="PET PALS">
+    <input type="text" placeholder="Search..">
+    <div class="off-screen-menu">
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT US</li>
+            <li>OUR SERVICES</li>
+            <li>CLIENT REVIEW</li>
+            <li>CONTACT US</li>
+        </ul>
+    </div>
+    <nav class="ham-menu"> 
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+     </nav>
+</header>
+
+
+
+
+
+<div class="button-container">
+    <a href="adopt.html">
+        <button class="adopt"> ADOPT</button>
+    </a>
+    <a href="services.html">
+        <button class="medicals"> MEDICALS</button>
+        <button class="accessories"> ACCESSORIES</button>
+    </a>
+    
+</div>
+<footer class="footer">
+  <div class="icon">
+     <img src="insta 1.jpg" alt="INSTAGRAM">
+     <h4>INSTAGRAM</h4> 
+  </div>
+  <div class="icon">
+      <img src="phone 1.jpg" alt="TELEPHONE">
+      <h4>TELEPHONE</h4> 
+  </div>
+  <div class="icon">
+      <img src="X-Logo 1.jpg" alt="TWITTER">
+      <h4>TWITTER</h4> 
+  </div>
+  <div class="icon">
+      <img src="mail 1.jpg" alt="MAIL">
+      <h4>MAIL</h4> 
+  </div>
+</footer>
+</body>

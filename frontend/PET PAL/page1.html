@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+  background-color: grey;
+}
+/* Custom CSS for navbar */
+.navbar {
+  background-color: olive !important; /* Olive background color */
+}
+
+/* Custom CSS for navbar links */
+.navbar-nav .nav-link {
+  color: white !important; /* White text color */
+}
+
+/* Custom CSS for logo */
+.navbar-brand img {
+  max-height: 30px; /* Adjust maximum height of the logo */
+}
+
+/* Custom CSS for search bar */
+.form-control {
+  width: auto; /* Allow search bar to adjust width based on content */
+}
+
+/* Custom CSS for search button */
+.btn-outline-success {
+  color: white; /* White text color */
+  border-color: white; /* White border color */
+}
+
+/* Custom CSS for toggle button icon */
+.navbar-toggler-icon {
+  color: white !important; /* White color for toggle button icon */
+  font-weight: 700;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+}
+
+.full-width-image {
+  width: 100%;
+  overflow: hidden;
+}
+.full-width-image img {
+  width: 100%;
+  height: auto;
+}
+
+.centered-text {
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.centered-text .btn {
+  background-color: #DBF4AD;
+  color: black;
+  font-weight: 700;
+  margin-top: 70px;
+  text-decoration: none;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: olive; /* Set the background color */
+  padding: 20px 0; /* Add some padding */
+}
+
+.footer img {
+  max-width: 100%; /* Ensure images don't exceed their container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.footer p {
+  margin-bottom: 0; /* Remove bottom margin from paragraphs */
+  font-size: 14px; /* Adjust font size */
+}
+
+.footer .col-auto {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: left; /* Center align items vertically */
+  margin-bottom: 10px; /* Add some spacing between image-text pairs */
+  margin-right: -25px;
+}
+
+.white-line {
+  border-top: 1px solid white; /* Set the border style */
+}
+
+/* Media query for screens smaller than 576px (extra small devices) */
+@media (max-width: 575.98px) {
+  .footer p {
+      font-size: 12px; /* Decrease font size for smaller screens */
+  }
+}
+
+/* Media query for screens larger than 575.98px */
+@media (min-width: 576px) {
+  .footer .col-auto {
+      margin-bottom: 5px; /* Add some spacing between image-text pairs */
+  }
+}
+
+/* Media query for screens larger than 767.98px */
+@media (min-width: 768px) {
+  .footer .col-auto {
+      margin-bottom: 30px; /* Add some spacing between image-text pairs */
+  }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="/assets/img/PET PALS logo 1.jpg" alt="Logo" height="30">
+      </a>
+
+      <!-- Search Bar -->
+      <form class="form-inline my-2 my-lg-0 mx-auto">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+
+      <!-- Three Row Lines Icon -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="full-width-image">
+    <img src="/assets/img/plate 2.png" alt="Full Width Image">
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="centered-text">
+          <h2>YAY!!! YOUR PET IS NOW HAPPY</h2>
+          <a href="carddetails.html" class="btn btn-primary">INPUT CARD DETAILS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <img src="/assets/img/insta 1.png" alt="Image 1">
+                <p class="ml-2">INSTAGRAM</p>
+            </div>
+            <div class="col-auto">
+                <img src="/assets/img/phone 1.png" alt="Image 2">
+                <p class="ml-2">TELEPHONE</p>
+            </div>
+            <div class="col-auto">
+                <img src="/assets/img/X-Logo 1.png" alt="Image 3">
+                <p class="ml-2">TWITTER</p>
+            </div>
+            <div class="col-auto">
+                <img src="/assets/img/phone 1.png" alt="Image 4">
+                <p class="ml-2">MAIL</p>
+            </div>
+        </div>
+    </div>
+    <hr class="white-line">
+    <div class="C" style="text-align: center; color: white;">
+      <p>Copyright © 2024, PETPAL, All rights reserved</p>
+  </div>
+</footer>
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
