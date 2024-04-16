@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -7,29 +6,47 @@
         <title>Pet Pal</title>
         <link rel="stylesheet" href="styles.css">
         <script src="scripts.js" defer></script>
-    </head>
-    <header class="header">
-        <img src="PET PALS logo 1.jpg" alt="">
-        <div class="search">
-            <form action="#">
-                <input type="text" placeholder="Search..." name="search">
-                <button>
-                    <i class="fa fa-search" style="font-size: 18px;"></i>
-                </button>
-            </form>
-        </div>
-        <nav class="ham-menu"> 
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
-    <body>
+    <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="{{ url_for('static', filename='images/PET PALS Logo 1.jpg') }}" alt="Image" height="30">
+      </a>
+
+      <!-- Search Bar -->
+      <form class="form-inline my-2 my-lg-0 mx-auto">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+
+      <!-- Three Row Lines Icon -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:5501/frontend/PET%20PAL/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5501/frontend/PET%20PAL/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:5501/frontend/PET%20PAL/page.html">Services</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
         <div class="meet-the-team">
             <h3>ABOUT US</h3>
-            <img src="dog with glasses 1.jpg">
+            <img src="dog with glasses 1.jpg" alt="dog">
             <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora modi veritatis ipsum ex asperiores magnam est ipsam voluptatum, repudiandae, adipisci fugiat distinctio obcaecati voluptas? Quidem dolorem ea excepturi molestias delectus?</h4>
             <h3>MEET OUR TEAM</h3>
         </div>
@@ -66,10 +83,6 @@
                 <img src="Jammy.jpg" alt="">
                 <h5>Jamillah Ssozi</h5>
             </div>
-            <div class="cell">
-                <img src="download.jpg" alt="">
-                <h5>Member 9</h5>
-            </div>
         </div>
         
         
@@ -104,102 +117,3 @@
     </footer>
     
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Pet Pal</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="scripts.js" defer></script>
-    </head>
-    <header class="header">
-        <img src="PET PALS logo 1.jpg" alt="">
-        <div class="search">
-            <form action="#">
-                <input type="text" placeholder="Search..." name="search">
-                <button>
-                    <i class="fa fa-search" style="font-size: 18px;"></i>
-                </button>
-            </form>
-        </div>
-        <nav class="ham-menu"> 
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
-    <body>
-        <div class="meet-the-team">
-            <h3>ABOUT US</h3>
-            <img src="dog with glasses 1.jpg">
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora modi veritatis ipsum ex asperiores magnam est ipsam voluptatum, repudiandae, adipisci fugiat distinctio obcaecati voluptas? Quidem dolorem ea excepturi molestias delectus?</h4>
-            <h3>MEET OUR TEAM</h3>
-        </div>
-        <div class="grid">
-            <div class="cell">
-                <img src="download.jpg" alt="">
-                <h5>Member 1</h5>
-            </div>
-            <div class="cell">
-                <img src="download.jpg" alt="">
-                <h5>Member 2</h5>
-            </div>
-            <div class="cell">
-                <img src="download.jpg" alt="">
-                <h5>Member 3</h5>
-            </div>
-            <div class="cell">
-                <img src="download.jpg" alt="">
-                <h5>Member 4</h5>
-            </div>
-            <div class="cell">
-                <img src="download.jpg" alt="">
-                <h5>Member 5</h5>
-            </div>
-            <div class="cell">
-                <img src="download.jpg" alt="">
-                <h5>Member 6</h5>
-            </div>
-            <div class="cell">
-                <img src="download.jpg" alt="">
-                <h5>Member 7</h5>
-            </div>
-            <div class="cell">
-                <img src="download.jpg" alt="">
-                <h5>Member 8</h5>
-            </div>
-            <div class="cell">
-                <img src="download.jpg" alt="">
-                <h5>Member 9</h5>
-            </div>
-        </div>
-        
-        
-    </body>
-    <footer class="footer">
-        <div class="icon-div">
-            <div class="icon">
-                <img src="insta 1.jpg" alt="">
-            </div>
-            <div class="icon">
-                <img src="phone 1.jpg" alt="">
-            </div>
-            <div class="icon">
-                <img src="X-Logo 1.jpg" alt="">
-            </div>
-            <div class="icon">
-                <img src="mail 1.jpg" alt="">
-            </div>
-        </div>
-        <div class="line-1">
-            <hr>
-        </div>
-        <h5>Copyright © 2024, PETPAL. All rights reserved</h5>
-    </footer>
-    
-</html>
->>>>>>> 9f9acbd10a950f1051c0628c7eaa56de1b9f01ed
